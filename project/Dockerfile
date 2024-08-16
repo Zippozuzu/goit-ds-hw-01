@@ -11,7 +11,7 @@ RUN curl -sSL https://install.python-poetry.org | python3 -
 ENV PATH="/root/.local/bin:$PATH"
 
 # Устанавливаем рабочую директорию
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Копируем файлы с описанием зависимостей
 COPY pyproject.toml ./
@@ -23,4 +23,4 @@ RUN poetry install --no-root --no-dev
 COPY . .
 
 # Указываем команду для запуска приложения
-CMD ["poetry", "run", "python", "main.py"]
+CMD ["python3", "project/main.py"]
