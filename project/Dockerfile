@@ -23,4 +23,4 @@ RUN poetry install --no-root --no-dev
 COPY . .
 
 # Указываем команду для запуска приложения
-CMD ["python3", "project/main.py"]
+CMD ["bash"]
